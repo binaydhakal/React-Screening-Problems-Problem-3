@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h3>Printing Numbers from 1 to 100.</h3>
+    <h3>But for multiples of 3 Print 'Fizz'.</h3>
+    <h3>But for multiples of 5 Print 'Buzz'.</h3>
+    <h3>But for multiples of both(3 and 5) Print 'FizzBuzz'.</h3>
+
+    <script>
+        document.write("<table class='table table-bordered'>"); /* used the bootstrap class i knew */
+        for(i=1; i<=100; i=i+10)
+        {
+            document.write("<tr>");
+            for(j=i; j<i+10; j++)
+            {
+                if((j%3 == 0) && (j%5 == 0))
+                {
+                    document.write("<td>"+"FizzBuzz"+"</td>")
+                }else if(j%3 == 0)
+                {
+                    document.write("<td>"+"Fizz"+"</td>")
+                }else if(j%5 == 0)
+                {
+                    document.write("<td>"+"Buzz"+"</td>")
+                }else 
+                {
+                    document.write("<td>"+j+"</td>")
+                }
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>");
+    </script>
+    
+</body>
+</html>
